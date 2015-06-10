@@ -1,0 +1,666 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: collective.serial\n"
+"POT-Creation-Date: 2015-04-09 15:28+0000\n"
+"PO-Revision-Date: 2015-04-10 15:29+0000’\n"
+"Last-Translator: INTK <info@intk.com>\n"
+"Language-Team: Dutch <info@intk.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: nl\n"
+"Language-Name: Dutch\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: collective.serial\n"
+
+#: ../profiles/default/types/Object.xml:7
+msgid "Object"
+msgstr "Objecten"
+
+#: ../profiles/default/types/Object.xml:8
+msgid "Information about an object typically collected by museums"
+msgstr "Informatie over een object meestal verzameld door musea"
+
+#: ../serial.py
+msgid "Book"
+msgstr "Boeken"
+
+#: ../serial.py
+msgid "Body"
+msgstr "Tekst"
+
+#: ../serial.py
+msgid "Description"
+msgstr "Beschrijving"
+
+#: ../serial.py
+msgid "Body"
+msgstr "Tekst"
+
+#: ../serial.py
+msgid "Title, author, imprint, collation"
+msgstr "Titel, auteur, impressum, collatie"
+
+#: ../serial.py
+msgid "Title and author"
+msgstr "Titel en auteur"
+
+#: ../serial.py
+msgid "Article"
+msgstr "Lidwoord"
+
+#: ../serial.py
+msgid "Title"
+msgstr "Titel"
+
+#: ../serial.py
+msgid "Statement of respsib."
+msgstr "Auteursvermelding"
+
+#: ../serial.py
+msgid "Author"
+msgstr "Auteur"
+
+#: ../serial.py
+msgid "Role"
+msgstr "Rol"
+
+#: ../serial.py
+msgid "Illustrator"
+msgstr "Illustrator"
+
+#: ../serial.py
+msgid "Corp.author"
+msgstr "Corp.auteur"
+
+#: ../serial.py
+msgid "Edition"
+msgstr "Editie"
+
+#: ../serial.py
+msgid "Imprint"
+msgstr "Impressum"
+
+#: ../serial.py
+msgid "Imprint"
+msgstr "Impressum"
+
+#: ../serial.py
+msgid "Place"
+msgstr "Plaats"
+
+#: ../serial.py
+msgid "Publisher"
+msgstr "Uitgever"
+
+#: ../serial.py
+msgid "Year"
+msgstr "Jaar"
+
+#: ../serial.py
+msgid "Place printed"
+msgstr "Plaats van druk"
+
+#: ../serial.py
+msgid "Printer"
+msgstr "Drukker"
+
+#: ../serial.py
+msgid "Sort year"
+msgstr "Sorteerjaar"
+
+#: ../serial.py
+msgid "Collation"
+msgstr "Collatie"
+
+#: ../serial.py
+msgid "Pagination"
+msgstr "Pagina's"
+
+#: ../serial.py
+msgid "Illustrations"
+msgstr "Illustraties"
+
+#: ../serial.py
+msgid "Dimensions"
+msgstr "Formaat"
+
+#: ../serial.py
+msgid "Accompanying material"
+msgstr "Begeleidend materiaal"
+
+#: ../serial.py
+msgid "Series, notes, ISBN"
+msgstr "Reeks, annotatie, ISBN"
+
+#: ../serial.py
+msgid "Series"
+msgstr "Reeks"
+
+#: ../serial.py
+msgid "Series article"
+msgstr "Lidwoord reeks"
+
+#: ../serial.py
+msgid "Series no."
+msgstr "Reeksnummer"
+
+#: ../serial.py
+msgid "ISSN series"
+msgstr "ISSN reeks"
+
+#: ../serial.py
+msgid "Subseries"
+msgstr "Onderreeks"
+
+#: ../serial.py
+msgid "Subseries article"
+msgstr "Onderreeks lidwoord"
+
+#: ../serial.py
+msgid "Subseries number"
+msgstr "Onderreeks nummer"
+
+#: ../serial.py
+msgid "ISSN subseries"
+msgstr "ISSN onderreeks"
+
+#: ../serial.py
+msgid "Notes"
+msgstr "Annotatie"
+
+#: ../serial.py
+msgid "Bibliographical notes"
+msgstr "Annotatie"
+
+#: ../serial.py
+msgid "ISBN"
+msgstr "ISBN"
+
+#: ../serial.py
+msgid "Price"
+msgstr "Prijs"
+
+#: ../serial.py
+msgid "Binding method"
+msgstr "Bindwijze"
+
+#: ../serial.py
+msgid "ISSN"
+msgstr "ISSN"
+
+#: ../serial.py
+msgid "Conference"
+msgstr "Conferentie"
+
+#: ../serial.py
+msgid "Abstract and subject terms"
+msgstr "Samenvatting, classificatie, trefwoorden"
+
+#: ../serial.py
+msgid "Material type"
+msgstr "Materiaalsoort"
+
+#: ../serial.py
+msgid "Bibl. form"
+msgstr "Blibliogr. vorm"
+
+#: ../serial.py
+msgid "Language"
+msgstr "Taal"
+
+#: ../serial.py
+msgid "Level"
+msgstr "Niveau"
+
+#: ../serial.py
+msgid "Class number"
+msgstr "Class. code"
+
+#: ../serial.py
+msgid "Subject term type"
+msgstr "Soort trefwoord"
+
+#: ../serial.py
+msgid "Subject term"
+msgstr "Trefwoord"
+
+#: ../serial.py
+msgid "Proper name"
+msgstr "Eigennaam"
+
+#: ../serial.py
+msgid "Person keyword type"
+msgstr "Soort pers.trefwoord"
+
+#: ../serial.py
+msgid "Person keyword type"
+msgstr "Naam"
+
+#: ../serial.py
+msgid "Role"
+msgstr "Rol"
+
+#: ../serial.py
+msgid "Geographical keyword"
+msgstr "Greografish trefwoord"
+
+#: ../serial.py
+msgid "Period"
+msgstr "Periode"
+
+#: ../serial.py
+msgid "Start date"
+msgstr "Begindatum"
+
+#: ../serial.py
+msgid "End date"
+msgstr "Einddatum"
+
+#: ../serial.py
+msgid "Digital references"
+msgstr "Digitale referenties"
+
+#: ../serial.py
+msgid "Reference"
+msgstr "Referentie"
+
+#: ../serial.py
+msgid "Abstract"
+msgstr "Samenvatting"
+
+#
+# Reproductions
+#
+
+#: ../serial.py
+msgid "Reproductions"
+msgstr "Reproducties"
+
+#: ../serial.py
+msgid "Reproduction"
+msgstr "Reproductie"
+
+#: ../serial.py
+msgid "Reference"
+msgstr "Referentie"
+
+#: ../serial.py
+msgid "Format"
+msgstr "Formaat"
+
+#: ../serial.py
+msgid "Type"
+msgstr "Soort"
+
+#: ../serial.py
+msgid "Date"
+msgstr "Datum"
+
+#: ../serial.py
+msgid "Identifier (URL)"
+msgstr "Identifier (URL)"
+
+#: ../serial.py
+msgid "Notes"
+msgstr "Bijzonderheden"
+
+#
+# exhibitions_auctions_collections
+#
+
+#: ../serial.py
+msgid "Exhibitions, auctions, collections"
+msgstr "Tentoonstellingen, veilingen, collecties"
+
+#: ../serial.py
+msgid "Exhibition"
+msgstr "Tentoonstelling"
+
+#: ../serial.py
+msgid "Exhibition name"
+msgstr "Tentoonstellingsnaam"
+
+#: ../serial.py
+msgid "Date"
+msgstr "Datum"
+
+#: ../serial.py
+msgid "to"
+msgstr "t/m"
+
+#: ../serial.py
+msgid "Venue"
+msgstr "Locatie"
+
+#: ../serial.py
+msgid "Venue"
+msgstr "Locatie"
+
+#: ../serial.py
+msgid "Auction"
+msgstr "Veiling"
+
+#: ../serial.py
+msgid "Auction name"
+msgstr "Veilingnaam"
+
+#: ../serial.py
+msgid "Auctioneer"
+msgstr "Veilinghuis"
+
+#: ../serial.py
+msgid "Collector"
+msgstr "Collectioneur"
+
+#: ../serial.py
+msgid "Commissair-priseur"
+msgstr "Commissair-priseur"
+
+#: ../serial.py
+msgid "Auction number"
+msgstr "Veilingnummer"
+
+#: ../serial.py
+msgid "Collection"
+msgstr "Collectie"
+
+#: ../serial.py
+msgid "Collection name"
+msgstr "Collectienaam"
+
+#: ../serial.py
+msgid "Organisation"
+msgstr "Organisatie"
+
+#: ../serial.py
+msgid "Location"
+msgstr "Locatie"
+
+#
+# Relations
+#
+
+#: ../serial.py
+msgid "Relations"
+msgstr "Relaties"
+
+#: ../serial.py
+msgid "Volume"
+msgstr "Deel"
+
+#: ../serial.py
+msgid "Analytical cataloguing"
+msgstr "Koepelgegevens"
+
+#: ../serial.py
+msgid "record no."
+msgstr "recordnr."
+
+#: ../serial.py
+msgid "Part of"
+msgstr "Onderdeel van"
+
+#: ../serial.py
+msgid "Consists of"
+msgstr "Bestaat uit"
+
+#: ../serial.py
+msgid "Museum objects"
+msgstr "Museumobjecten"
+
+#: ../serial.py
+msgid "Object no."
+msgstr "Objectnr"
+
+#: ../serial.py
+msgid "Object name"
+msgstr "Objectnaam"
+
+#: ../serial.py
+msgid "Maker"
+msgstr "Vervaardiger"
+
+#
+# Free fields
+#
+
+
+#: ../serial.py
+msgid "Free fields and numbers"
+msgstr "Vrije velden en nummer"
+
+#: ../serial.py
+msgid "Free fields"
+msgstr "Vrije velden"
+
+#: ../serial.py
+msgid "Confidential"
+msgstr "Vertrouwelijk"
+
+#: ../serial.py
+msgid "Contents"
+msgstr "Inhoud"
+
+#: ../serial.py
+msgid "Other number"
+msgstr "Andere nummers"
+
+#: ../serial.py
+msgid "PPN"
+msgstr "PPN"
+
+#
+# Copies and shelf marks
+#
+
+#: ../serial.py
+msgid "Copies and shelf marks"
+msgstr "Exemplaren en vindplaatsen"
+
+#: ../serial.py
+msgid "Default shelf mark"
+msgstr "Standaard signatuur"
+
+#: ../serial.py
+msgid "Copy details"
+msgstr "Exemplaargegevens"
+
+#: ../serial.py
+msgid "Copy number"
+msgstr "Exemplaarnummer"
+
+#: ../serial.py
+msgid "Shelf mark"
+msgstr "Plaatscode"
+
+#: ../serial.py
+msgid "Availability"
+msgstr "Beschikbaarheid"
+
+#: ../serial.py
+msgid "Loan category"
+msgstr "Uitleencategorie"
+
+#: ../serial.py
+msgid "Site"
+msgstr "Filiaal"
+
+#: ../serial.py
+msgid "Location notes"
+msgstr "Bijzonderheden locatie"
+
+#
+# Series
+#
+
+#: ../serial.py
+msgid "Quantity"
+msgstr "Aantal"
+
+#: ../serial.py
+msgid "Lead word"
+msgstr "Lidwoord"
+
+#: ../serial.py
+msgid "Contents"
+msgstr "Omvang"
+
+#: ../serial.py
+msgid "Physical details"
+msgstr "Fysieke kenmerken"
+
+
+#: ../serial.py
+msgid "Production"
+msgstr "Productie"
+
+#: ../serial.py
+msgid "Broadcast"
+msgstr "Uitzending"
+
+#: ../serial.py
+msgid "Broadcasting company"
+msgstr "Omroep"
+
+#: ../serial.py
+msgid "Production company"
+msgstr "Productiemaatschappij"
+
+
+#: ../serial.py
+msgid "Audiovisual"
+msgstr "Audio-visuele materialen"
+
+
+#: ../serial.py
+msgid "Audio-visual materials"
+msgstr "Audio-visuele materialen"
+
+#
+# Articles
+#
+
+#: ../serial.py
+msgid "Article"
+msgstr "Artikel"
+
+#: ../serial.py
+msgid "Articles"
+msgstr "Artikelen"
+
+#
+# Sources
+#
+
+#: ../serial.py
+msgid "Source"
+msgstr "Vindplaats"
+
+
+#: ../serial.py
+msgid "Source title article"
+msgstr "Lidwoord brontitel"
+
+
+#: ../serial.py
+msgid "Material type"
+msgstr "Materiaalsoort"
+
+#: ../serial.py
+msgid "Source title"
+msgstr "Brontitel"
+
+#: ../serial.py
+msgid "Volume"
+msgstr "Jaargang"
+
+#: ../serial.py
+msgid "Issue"
+msgstr "Aflevering"
+
+#: ../serial.py
+msgid "Day"
+msgstr "Dag"
+
+#: ../serial.py
+msgid "Year"
+msgstr "Jaar"
+
+#: ../serial.py
+msgid "Pagination"
+msgstr "Pagina's"
+
+#: ../serial.py
+msgid "Notes"
+msgstr "Bijzonderheden"
+
+#: ../serial.py
+msgid "Bibliographical notes"
+msgstr "Annotatie"
+
+#: ../serial.py
+msgid "Illustrations"
+msgstr "Illustraties"
+
+#: ../serial.py
+msgid "Title, author, source"
+msgstr "Titel, auteur, vindplaats"
+
+
+#
+# Serials
+#
+
+#: ../serial.py
+msgid "Issues"
+msgstr "Nummering"
+
+#: ../serial.py
+msgid "Issues"
+msgstr "Nummering"
+
+#: ../serial.py
+msgid "Series, notes, ISSN, shelf mark"
+msgstr "Reeks, annotatie, ISSN, vindplaats"
+
+#: ../serial.py
+msgid "ISSN series"
+msgstr "ISSN van reeks"
+
+#: ../serial.py
+msgid "Holding"
+msgstr "Holding"
+
+#: ../serial.py
+msgid "Continuation"
+msgstr "Voortzetting"
+
+#: ../serial.py
+msgid "Continued from"
+msgstr "Voortzetting van"
+
+#: ../serial.py
+msgid "Continued as"
+msgstr "Voortgezet als"
+
+#: ../serial.py
+msgid "Missing"
+msgstr "Ontbreekt"
+
+#: ../serial.py
+msgid "Serials"
+msgstr "Tijdschriften"
+
+#: ../serial.py
+msgid "Serial"
+msgstr "Tijdschrift"
+
+
+
+
+
+
+
+
