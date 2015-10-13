@@ -68,6 +68,21 @@ from .utils.views import *
 # # # # # # # # # # # # ###
 # # # # # # # # # # # # ###
 
+from plone.app.content.interfaces import INameFromTitle
+class INameFromPersonNames(INameFromTitle):
+    def title():
+        """Return a processed title"""
+
+class NameFromPersonNames(object):
+    implements(INameFromPersonNames)
+    
+    def __init__(self, context):
+        self.context = context
+
+    @property
+    def title(self):
+        return self.context.titleAuthorImprintCollation_titleAuthor_title[0]['title']
+
 class ISerial(form.Schema):
 
     priref = schema.TextLine(
@@ -99,7 +114,7 @@ class ISerial(form.Schema):
 
     titleAuthorImprintCollation_titleAuthor_leadWord = schema.TextLine(
         title=_(u'Lead word'),
-        required=False
+        required=True
     )
     dexteritytextindexer.searchable('titleAuthorImprintCollation_titleAuthor_leadWord')
 

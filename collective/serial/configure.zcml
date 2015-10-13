@@ -88,4 +88,10 @@
 
   <!-- -*- extra stuff goes here -*- -->
 
+  <!-- -*- extra stuff goes here -*- -->
+  <adapter for=".serial.ISerial"
+    provides=".serial.INameFromPersonNames"
+    factory=".serial.NameFromPersonNames"
+    />
+
 </configure>
