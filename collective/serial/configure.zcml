@@ -34,11 +34,13 @@
       />
     
   <browser:page
-        name="view"
+        name="contents_view"
         for="collective.serial.serial.ISerial"
         class="collective.serial.serial.SerialView"
         template="serial_templates/view.pt"
         permission="zope2.View"
+        title="View Content"
+        menu="plone_displayviews"
         />
 
 

@@ -1,5 +1,94 @@
 <!-- Secondary fieldsets -->
-  
+<div metal:define-macro="private_view">
+  <tal:title_author tal:condition='python: fieldset_text == "title_author"'
+    tal:define='widgets group/widgets'>
+
+    <!-- Books details -->
+    <div class="row no-padding">
+
+        <h2 class="page-header" i18n:translate="">Titel en auteur</h2>
+
+        <div class="form-horizontal">
+          <tal:widget tal:replace="structure widgets/titleAuthorImprintCollation_titleAuthor_leadWord/@@ploneform-render-widget"/>
+        </div>
+
+        <div class="form-horizontal gridfield">
+          <tal:widget tal:replace="structure widgets/titleAuthorImprintCollation_titleAuthor_title/@@ploneform-render-widget"/>
+        </div>
+        
+        <div class="form-horizontal">
+          <tal:widget tal:replace="structure widgets/titleAuthorImprintCollation_titleAuthor_statementOfRespsib/@@ploneform-render-widget"/>
+        </div>
+
+        <div class="form-horizontal gridfield ">
+          <tal:widget tal:replace="structure widgets/titleAuthorImprintCollation_titleAuthor_author/@@ploneform-render-widget"/>
+        </div>
+
+        <div class="form-horizontal gridfield">
+          <tal:widget tal:replace="structure widgets/titleAuthorImprintCollation_titleAuthor_corpAuthor/@@ploneform-render-widget"/>
+        </div>
+
+        <h2 class="page-header" i18n:translate="">Editie</h2>
+
+        <div class="form-horizontal">
+          <tal:widget tal:replace="structure widgets/titleAuthorImprintCollation_edition_edition/@@ploneform-render-widget"/>
+        </div>
+
+        <h2 class="page-header" i18n:translate="">Nummering</h2>
+
+        <div class="form-horizontal">
+          <tal:widget tal:replace="structure widgets/titleAuthorImprintCollation_issues_issues/@@ploneform-render-widget"/>
+        </div>
+
+        <h2 class="page-header" i18n:translate="">Impressum</h2>
+
+        <div class="form-horizontal gridfield">
+          <tal:widget tal:replace="structure widgets/titleAuthorImprintCollation_imprint_place/@@ploneform-render-widget"/>
+        </div>
+
+        <div class="form-horizontal gridfield">
+          <tal:widget tal:replace="structure widgets/titleAuthorImprintCollation_imprint_publisher/@@ploneform-render-widget"/>
+        </div>
+
+        <div class="form-horizontal">
+          <tal:widget tal:replace="structure widgets/titleAuthorImprintCollation_imprint_year/@@ploneform-render-widget"/>
+        </div>
+
+        <div class="form-horizontal">
+          <tal:widget tal:replace="structure widgets/titleAuthorImprintCollation_imprint_placesPrinted/@@ploneform-render-widget"/>
+        </div>
+
+        <div class="form-horizontal gridfield">
+          <tal:widget tal:replace="structure widgets/titleAuthorImprintCollation_imprint_printer/@@ploneform-render-widget"/>
+        </div>
+
+        <h2 class="page-header" i18n:translate="">Sort year</h2>
+
+        <div class="form-horizontal">
+          <tal:widget tal:replace="structure widgets/titleAuthorImprintCollation_sortYear_sortYear/@@ploneform-render-widget"/>
+        </div>
+
+        <h2 class="page-header" i18n:translate="">Collatie</h2>
+
+        <div class="form-horizontal">
+          <tal:widget tal:replace="structure widgets/titleAuthorImprintCollation_collation_illustrations/@@ploneform-render-widget"/>
+        </div>
+
+        <div class="form-horizontal">
+          <tal:widget tal:replace="structure widgets/titleAuthorImprintCollation_collation_dimensions/@@ploneform-render-widget"/>
+        </div>
+
+        <div class="form-horizontal gridfield">
+          <tal:widget tal:replace="structure widgets/titleAuthorImprintCollation_collation_accompanyingMaterial/@@ploneform-render-widget"/>
+        </div>
+
+
+    </div>
+  </tal:title_author>
+</div>
+
+
+
 <div metal:define-macro="test">
 
   <tal:title_author tal:condition='python: fieldset_text == "title_author"'
@@ -9,7 +98,7 @@
     <div class="row no-padding">
 
         <h2 class="page-header" i18n:translate="">Title and author</h2>
-
+        
         <div class="form-horizontal">
           <tal:widget tal:replace="structure widgets/titleAuthorImprintCollation_titleAuthor_leadWord/@@ploneform-render-widget"/>
         </div>
@@ -26,7 +115,7 @@
           <tal:widget tal:replace="structure widgets/titleAuthorImprintCollation_titleAuthor_author/@@ploneform-render-widget"/>
         </div>
 
-        <div class="form-horizontal">
+        <div class="form-horizontal gridfield">
           <tal:widget tal:replace="structure widgets/titleAuthorImprintCollation_titleAuthor_corpAuthor/@@ploneform-render-widget"/>
         </div>
 
@@ -56,8 +145,8 @@
           <tal:widget tal:replace="structure widgets/titleAuthorImprintCollation_imprint_year/@@ploneform-render-widget"/>
         </div>
 
-        <div class="form-horizontal gridfield">
-          <tal:widget tal:replace="structure widgets/titleAuthorImprintCollation_imprint_placePrinted/@@ploneform-render-widget"/>
+        <div class="form-horizontal">
+          <tal:widget tal:replace="structure widgets/titleAuthorImprintCollation_imprint_placesPrinted/@@ploneform-render-widget"/>
         </div>
 
         <div class="form-horizontal gridfield">
@@ -74,6 +163,9 @@
         
         <div class="form-horizontal">
           <tal:widget tal:replace="structure widgets/titleAuthorImprintCollation_collation_illustrations/@@ploneform-render-widget"/>
+        </div>
+
+        <div class="form-horizontal">
           <tal:widget tal:replace="structure widgets/titleAuthorImprintCollation_collation_dimensions/@@ploneform-render-widget"/>
         </div>
 
@@ -84,7 +176,7 @@
     </div>
   </tal:title_author>
 
-  <tal:series_notes_issn_shelfmark tal:condition='python: fieldset_text == "series_notes_issn_shelfmark"'
+  <tal:series_notes_isbn tal:condition='python: fieldset_text == "series_notes_isbn"'
     tal:define='widgets group/widgets'>
 
     <!-- Series details -->
@@ -92,44 +184,44 @@
       <h2 class="page-header" i18n:translate="">Series</h2>
       
       <div class="form-horizontal gridfield">
-          <tal:widget tal:replace="structure widgets/seriesNotesISSNShelfmark_series_series/@@ploneform-render-widget"/>
+          <tal:widget tal:replace="structure widgets/seriesNotesISBN_series_series/@@ploneform-render-widget"/>
       </div>
 
-      <h2 class="page-header" i18n:translate="">Bibliographical notes</h2>
+      <h2 class="page-header" i18n:translate="">Annotatie</h2>
 
       <div class="form-horizontal gridfield">
-          <tal:widget tal:replace="structure widgets/seriesNotesISSNShelfmark_notes_holding/@@ploneform-render-widget"/>
+          <tal:widget tal:replace="structure widgets/seriesNotesISBN_notes_holding/@@ploneform-render-widget"/>
       </div>
 
       <div class="form-horizontal gridfield">
-          <tal:widget tal:replace="structure widgets/seriesNotesISSNShelfmark_notes_bibliographicalNotes/@@ploneform-render-widget"/>
+          <tal:widget tal:replace="structure widgets/seriesNotesISBN_notes_bibliographicalNotes/@@ploneform-render-widget"/>
       </div>
-
+      
       <h2 class="page-header" i18n:translate="">ISSN</h2>
 
       <div class="form-horizontal gridfield">
-          <tal:widget tal:replace="structure widgets/seriesNotesISSNShelfmark_ISSN_ISSN/@@ploneform-render-widget"/>
+          <tal:widget tal:replace="structure widgets/seriesNotesISBN_ISSN_ISSN/@@ploneform-render-widget"/>
       </div>
 
       <h2 class="page-header" i18n:translate="">Continuation</h2>
 
       <div class="form-horizontal gridfield">
-          <tal:widget tal:replace="structure widgets/seriesNotesISSNShelfmark_continuation_continuedFrom/@@ploneform-render-widget"/>    
+          <tal:widget tal:replace="structure widgets/seriesNotesISBN_continuation_continuedFrom/@@ploneform-render-widget"/>
       </div>
 
       <div class="form-horizontal gridfield">
-          <tal:widget tal:replace="structure widgets/seriesNotesISSNShelfmark_continuation_continuedAs/@@ploneform-render-widget"/>    
+          <tal:widget tal:replace="structure widgets/seriesNotesISBN_continuation_continuedAs/@@ploneform-render-widget"/>
       </div>
 
       <h2 class="page-header" i18n:translate="">Conference</h2>
 
       <div class="form-horizontal gridfield">
-          <tal:widget tal:replace="structure widgets/seriesNotesISSNShelfmark_conference_conference/@@ploneform-render-widget"/>    
+          <tal:widget tal:replace="structure widgets/seriesNotesISBN_conference_conference/@@ploneform-render-widget"/>    
       </div>
 
     </div>
 
-  </tal:series_notes_issn_shelfmark>
+  </tal:series_notes_isbn>
 
   <tal:abstract_subject_terms tal:condition='python: fieldset_text == "abstract_subject_terms"'
     tal:define='widgets group/widgets'>
@@ -139,15 +231,15 @@
 
       <h2 class="page-header" i18n:translate="">Abstract and subject terms</h2>
       
-      <div class="form-horizontal gridfield">
+      <div class="form-horizontal">
           <tal:widget tal:replace="structure widgets/abstractAndSubjectTerms_materialType/@@ploneform-render-widget"/>
       </div>
       
-      <div class="form-horizontal gridfield">
+      <div class="form-horizontal">
           <tal:widget tal:replace="structure widgets/abstractAndSubjectTerms_biblForm/@@ploneform-render-widget"/>
       </div>
 
-      <div class="form-horizontal gridfield">
+      <div class="form-horizontal">
           <tal:widget tal:replace="structure widgets/abstractAndSubjectTerms_language/@@ploneform-render-widget"/>
       </div>
 
@@ -159,7 +251,7 @@
           <tal:widget tal:replace="structure widgets/abstractAndSubjectTerms_notes/@@ploneform-render-widget"/>
       </div>
 
-      <div class="form-horizontal gridfield">
+      <div class="form-horizontal">
           <tal:widget tal:replace="structure widgets/abstractAndSubjectTerms_classNumber/@@ploneform-render-widget"/>    
       </div>
 
@@ -171,11 +263,11 @@
           <tal:widget tal:replace="structure widgets/abstractAndSubjectTerms_personKeywordType/@@ploneform-render-widget"/>    
       </div>
 
-      <div class="form-horizontal gridfield">
+      <div class="form-horizontal">
           <tal:widget tal:replace="structure widgets/abstractAndSubjectTerms_geographicalKeyword/@@ploneform-render-widget"/>    
       </div>
 
-      <div class="form-horizontal gridfield">
+      <div class="form-horizontal">
           <tal:widget tal:replace="structure widgets/abstractAndSubjectTerms_period/@@ploneform-render-widget"/>    
       </div>
 
@@ -188,7 +280,7 @@
         </div>
       </div>
 
-      <h2 class="page-header" i18n:translate="">Digital references</h2>
+      <h2 class="page-header header-padding" i18n:translate="">Digital references</h2>
 
       <div class="form-horizontal gridfield">
           <tal:widget tal:replace="structure widgets/abstractAndSubjectTerms_digitalReferences_reference/@@ploneform-render-widget"/>    
@@ -222,7 +314,7 @@
     <!-- exhibitions_auctions_collections -->
     <div class="row no-padding">
         <h2 class="page-header" i18n:translate="">Exhibition</h2>
-
+   
         <div class="form-horizontal gridfield">
           <tal:widget tal:replace="structure widgets/exhibitionsAuctionsCollections_exhibition/@@ploneform-render-widget"/>
         </div>
@@ -244,7 +336,7 @@
 
   <tal:relations tal:condition='python: fieldset_text == "relations"'
     tal:define='widgets group/widgets'>
-    <!-- relations -->
+    <!-- Relations -->
     <div class="row no-padding">
         
         <div class="form-horizontal">
@@ -252,12 +344,6 @@
         </div>
 
         <h2 class="page-header" i18n:translate="">Analytical cataloguing</h2>
-
-        <div class="form-horizontal">
-          <tal:widget tal:replace="structure widgets/relations_analyticalCataloguing_recordNo/@@ploneform-render-widget"/>
-          <tal:widget tal:replace="structure widgets/relations_analyticalCataloguing_volume/@@ploneform-render-widget"/>
-          <tal:widget tal:replace="structure widgets/relations_analyticalCataloguing_title/@@ploneform-render-widget"/>
-        </div>
 
         <div class="form-horizontal gridfield">
           <tal:widget tal:replace="structure widgets/relations_analyticalCataloguing_partOf/@@ploneform-render-widget"/>

@@ -574,7 +574,7 @@ msgstr "Brontitel"
 
 #: ../serial.py
 msgid "Volume"
-msgstr "Jaargang"
+msgstr "Deel"
 
 #: ../serial.py
 msgid "Issue"
@@ -657,10 +657,31 @@ msgstr "Tijdschriften"
 msgid "Serial"
 msgstr "Tijdschrift"
 
+#: ../serial.py
+msgid "label_author_role"
+msgstr "Functie"
 
+#: ../serial.py
+msgid "label_notes_op"
+msgstr "Opmerkingen"
 
+#: ../serial.py
+msgid "personal name"
+msgstr "persoonsnaam"
 
+#: ../serial.py
+msgid "institution"
+msgstr "instelling"
 
+#: ../serial.py
+msgid "regiment/service"
+msgstr "dienstonderdeel"
 
+#: ../audiovisualmaterial.py
+msgid "Person keyword type"
+msgstr "Soort pers.trefwoord"
 
+#: ../audiovisualmaterial.py
+msgid "Name"
+msgstr "Naam"
 
