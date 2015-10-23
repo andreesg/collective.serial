@@ -249,7 +249,7 @@ class IClassNumber(Interface):
     term = schema.TextLine(title=_(u'Class number'), required=False)
 
 class ISubjectTerm(Interface):
-    subjectTermType = schema.Choice(title=_(u'Subject term type'), required=True, vocabulary="collective.bibliotheek.subjectermtype", default="No value")
+    subjectTermType = schema.Choice(title=_(u'Subject term type'), required=True, vocabulary="collective.bibliotheek.subjectermtype", default="No value", missing_value=" ")
     subjectType = schema.List(
         title=_(u'Subject term'),
         required=False,
@@ -269,7 +269,7 @@ class ISubjectTerm(Interface):
     form.widget('properName', AjaxSingleSelectFieldWidget, vocabulary="collective.bibliotheek.propername")
 
 class IPersonKeywordType(Interface):
-    personKeywordType = schema.Choice(title=_(u'Person keyword type'), required=True, vocabulary="collective.bibliotheek.personkeywordtype", default="No value")
+    personKeywordType = schema.Choice(title=_(u'Person keyword type'), required=True, vocabulary="collective.bibliotheek.personkeywordtype", default="No value",  missing_value=" ")
     name = RelationList(
         title=_(u'Name'),
         default=[],
@@ -310,7 +310,7 @@ class IReproduction(Interface):
     #format = schema.TextLine(title=_(u'Format'), required=False)
     #date = schema.TextLine(title=_(u'Date'), required=False)
     identifierURL = schema.TextLine(title=_(u'Identifier (URL)'), required=False)
-    notes = schema.TextLine(title=_(u'Notes'), required=False)
+    notes = schema.Text(title=_(u'Notes'), required=False)
 
 ##
 ## Exhibitions, auctions, collections
@@ -346,7 +346,7 @@ class IAuction(Interface):
     #collector = schema.TextLine(title=_(u'Collector'), required=False)
     #commissairPriseur = schema.TextLine(title=_(u'Commissair-priseur'), required=False)
     #auctionNumber = schema.TextLine(title=_(u'Auction number'), required=False)
-    notes = schema.TextLine(title=_(u'Notes'), required=False)
+    notes = schema.Text(title=_(u'Notes'), required=False)
 
 class ICollection(Interface):
     collectionName = schema.TextLine(title=_(u'Collection name'), required=False)
@@ -354,7 +354,7 @@ class ICollection(Interface):
     #organisation = schema.TextLine(title=_(u'Organisation'), required=False)
     #date = schema.TextLine(title=_(u'Date'), required=False)
     #place = schema.TextLine(title=_(u'Place'), required=False)
-    notes = schema.TextLine(title=_(u'Notes'), required=False)
+    notes = schema.Text(title=_(u'Notes'), required=False)
 
 
 # Relations
