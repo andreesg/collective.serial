@@ -30,7 +30,7 @@ from z3c.form.browser.textlines import TextLinesFieldWidget
 
 from z3c.relationfield.schema import RelationChoice
 from z3c.relationfield.schema import RelationList
-from collective.object.utils.widgets import SimpleRelatedItemsFieldWidget, AjaxSingleSelectFieldWidget
+from collective.object.utils.widgets import SimpleRelatedItemsFieldWidget, AjaxSingleSelectFieldWidget, ExtendedRelatedItemsWidget
 from collective.object.utils.source import ObjPathSourceBinder
 from plone.directives import dexterity, form
 
@@ -53,6 +53,7 @@ from collective import dexteritytextindexer
 from plone.dexterity.browser.view import DefaultView
 from plone.dexterity.content import Container
 from plone.dexterity.browser import add, edit
+
 
 # # # # # # # # # # # # # # # # # #
 # !Serial specific imports!       #
@@ -343,7 +344,7 @@ class ISerial(form.Schema):
     abstractAndSubjectTerms_subjectTerm = ListField(title=_(u'Subject term'),
         value_type=DictRow(title=_(u'Subject term'), schema=ISubjectTerm),
         required=False)
-    form.widget(abstractAndSubjectTerms_subjectTerm=DataGridFieldFactory)
+    form.widget(abstractAndSubjectTerms_subjectTerm=BlockDataGridFieldFactory)
     dexteritytextindexer.searchable('abstractAndSubjectTerms_subjectTerm')
 
     abstractAndSubjectTerms_personKeywordType = ListField(title=_(u'Person keyword type'),
@@ -449,7 +450,7 @@ class ISerial(form.Schema):
     # # # # # # # # # # # # # # # # # # # # #
 
     model.fieldset('relations', label=_(u'Relations'), 
-        fields=['relations_volume', 'relations_analyticalCataloguing_partOf',
+        fields=['relations_volume', 'relations_analyticalCataloguing_partOf', 'relations_museumobjects',
                 'relations_analyticalCataloguing_consistsOf', 'relations_museumObjects', 'relations_relatedMuseumObjects']
     )
 
@@ -488,6 +489,18 @@ class ISerial(form.Schema):
         ),
         required=False
     )
+
+    relations_museumobjects = RelationList(
+        title=_(u'Object no.'),
+        default=[],
+        missing_value=[],
+        value_type=RelationChoice(
+            title=u"Related",
+            source=ObjPathSourceBinder(portal_type="Object")
+        ),
+        required=False
+    )
+    form.widget('relations_museumobjects', ExtendedRelatedItemsWidget, vocabulary='collective.object.relateditems')
 
     # # # # # # # # # # # # # # # # # # # # #
     # Free fields and numbers               #
