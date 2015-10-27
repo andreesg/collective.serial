@@ -596,7 +596,10 @@ class Serial(Container):
 
     def Title(self):
         ''' Return a title from title author '''
-        return self.titleAuthorImprintCollation_titleAuthor_title[0]['title']
+        try:
+            return self.titleAuthorImprintCollation_titleAuthor_title[0]['title']
+        except:
+            return ""
 
     @property
     def title(self):
