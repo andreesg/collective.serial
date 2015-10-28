@@ -115,7 +115,7 @@ class ISerial(form.Schema):
 
     titleAuthorImprintCollation_titleAuthor_leadWord = schema.TextLine(
         title=_(u'Lead word'),
-        required=True
+        required=False
     )
     dexteritytextindexer.searchable('titleAuthorImprintCollation_titleAuthor_leadWord')
 
