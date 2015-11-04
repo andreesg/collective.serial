@@ -30,7 +30,7 @@ from z3c.form.browser.textlines import TextLinesFieldWidget
 
 from z3c.relationfield.schema import RelationChoice
 from z3c.relationfield.schema import RelationList
-from collective.object.utils.widgets import SimpleRelatedItemsFieldWidget, AjaxSingleSelectFieldWidget, ExtendedRelatedItemsWidget
+from collective.object.utils.widgets import SimpleRelatedItemsFieldWidget, AjaxSingleSelectFieldWidget, ExtendedRelatedItemsWidget, ExtendedRelatedItemsFieldWidget
 from collective.object.utils.source import ObjPathSourceBinder
 from plone.directives import dexterity, form
 
@@ -147,7 +147,7 @@ class ISerial(form.Schema):
         ),
         required=False
     )
-    form.widget('titleAuthorImprintCollation_titleAuthor_corpAuthors', ExtendedRelatedItemsWidget, vocabulary='collective.object.relateditems')
+    form.widget('titleAuthorImprintCollation_titleAuthor_corpAuthors', ExtendedRelatedItemsFieldWidget, vocabulary='collective.object.relateditems')
 
     # Edition
     titleAuthorImprintCollation_edition_edition = schema.TextLine(
@@ -179,7 +179,7 @@ class ISerial(form.Schema):
         ),
         required=False
     )
-    form.widget('titleAuthorImprintCollation_imprint_publishers', ExtendedRelatedItemsWidget, vocabulary='collective.object.relateditems')
+    form.widget('titleAuthorImprintCollation_imprint_publishers', ExtendedRelatedItemsFieldWidget, vocabulary='collective.object.relateditems')
 
     titleAuthorImprintCollation_imprint_year = schema.TextLine(
         title=_(u'Year'),
@@ -206,7 +206,7 @@ class ISerial(form.Schema):
         ),
         required=False
     )
-    form.widget('titleAuthorImprintCollation_imprint_printers', ExtendedRelatedItemsWidget, vocabulary='collective.object.relateditems')
+    form.widget('titleAuthorImprintCollation_imprint_printers', ExtendedRelatedItemsFieldWidget, vocabulary='collective.object.relateditems')
 
     # Sort year
     titleAuthorImprintCollation_sortYear_sortYear = schema.TextLine(
@@ -469,7 +469,7 @@ class ISerial(form.Schema):
 
     model.fieldset('relations', label=_(u'Relations'), 
         fields=['relations_volume', 'relations_analyticalCataloguing_partsOf', 'relations_museumobjects',
-                'relations_analyticalCataloguing_consistsof', 'relations_museumObjects', 'relations_relatedMuseumObjects']
+                'relations_analyticalCataloguing_consistsof']
     )
 
     relations_volume = schema.TextLine(
@@ -489,7 +489,7 @@ class ISerial(form.Schema):
         ),
         required=False
     )
-    form.widget('relations_analyticalCataloguing_partsOf', ExtendedRelatedItemsWidget, vocabulary='collective.object.relateditems')
+    form.widget('relations_analyticalCataloguing_partsOf', ExtendedRelatedItemsFieldWidget, vocabulary='collective.object.relateditems')
 
     relations_analyticalCataloguing_consistsof = RelationList(
         title=_(u'Consists of'),
@@ -501,25 +501,9 @@ class ISerial(form.Schema):
         ),
         required=False
     )
-    form.widget('relations_analyticalCataloguing_consistsof', ExtendedRelatedItemsWidget, vocabulary='collective.object.relateditems')
+    form.widget('relations_analyticalCataloguing_consistsof', ExtendedRelatedItemsFieldWidget, vocabulary='collective.object.relateditems')
 
     # Museum objects
-    relations_museumObjects = ListField(title=_(u'Museum objects'),
-        value_type=DictRow(title=_(u'Museum objects'), schema=IMuseumObjects),
-        required=False)
-    form.widget(relations_museumObjects=DataGridFieldFactory)
-    dexteritytextindexer.searchable('relations_museumObjects')
-
-    relations_relatedMuseumObjects = RelationList(
-        title=_(u'Museum objects'),
-        default=[],
-        value_type=RelationChoice(
-            title=u"Related",
-            source=ObjPathSourceBinder()
-        ),
-        required=False
-    )
-
     relations_museumobjects = RelationList(
         title=_(u'Object no.'),
         default=[],
@@ -530,7 +514,7 @@ class ISerial(form.Schema):
         ),
         required=False
     )
-    form.widget('relations_museumobjects', ExtendedRelatedItemsWidget, vocabulary='collective.object.relateditems')
+    form.widget('relations_museumobjects', ExtendedRelatedItemsFieldWidget, vocabulary='collective.object.relateditems')
 
     # # # # # # # # # # # # # # # # # # # # #
     # Free fields and numbers               #

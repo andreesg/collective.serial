@@ -89,7 +89,7 @@
 
 
 
-<div metal:define-macro="test">
+<div metal:define-macro="test" i18n:domain="collective.serial">
 
   <tal:title_author tal:condition='python: fieldset_text == "title_author"'
     tal:define='widgets group/widgets'>
