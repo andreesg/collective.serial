@@ -3,6 +3,32 @@ from plone.indexer.decorator import indexer
 from ..serial import ISerial
 
 @indexer(ISerial)
+def library_author(object, **kw):
+    try:
+        if hasattr(object, 'titleAuthorImprintCollation_titleAuthor_author'):
+            list_authors = []
+            items = object.titleAuthorImprintCollation_titleAuthor_author
+            if items:
+                for item in items:
+                    if item['authors']:
+                        author = item['authors'][0]
+                        if IRelationValue.providedBy(author):
+                            author_obj = author.to_object
+                            title = getattr(author_obj, 'title', None)
+                            if title:
+                                list_authors.append(title)
+                        else:
+                            title = getattr(author, 'title', None)
+                            if title:
+                                list_authors.append(title)
+
+            return "_".join(list_authors)
+        else:
+            return ""
+    except:
+        return ""
+        
+@indexer(ISerial)
 def abstractAndSubjectTerms_subjectTerm_subjectType(object, **kw):
     try:
         if hasattr(object, 'abstractAndSubjectTerms_subjectTerm'):

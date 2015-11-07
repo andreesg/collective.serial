@@ -97,6 +97,8 @@
   <adapter name="copiesAndShelfMarks_copyDetails_loan" factory=".utils.indexers.copiesAndShelfMarks_copyDetails_loan" />
   <adapter name="copiesAndShelfMarks_copyDetails_site" factory=".utils.indexers.copiesAndShelfMarks_copyDetails_site" />
   
+  <adapter name="library_author" factory=".utils.indexers.library_author" />
+  
   <!-- -*- extra stuff goes here -*- -->
   <adapter for=".serial.ISerial"
     provides=".serial.INameFromPersonNames"
