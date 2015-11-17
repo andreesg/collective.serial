@@ -3,6 +3,16 @@ from plone.indexer.decorator import indexer
 from ..serial import ISerial
 
 @indexer(ISerial)
+def library_year(object, **kw):
+    try:
+        if hasattr(object, 'titleAuthorImprintCollation_imprint_year'):
+            return object.titleAuthorImprintCollation_imprint_year
+        else:
+            return ""
+    except:
+        return ""
+
+@indexer(ISerial)
 def library_author(object, **kw):
     try:
         if hasattr(object, 'titleAuthorImprintCollation_titleAuthor_author'):
