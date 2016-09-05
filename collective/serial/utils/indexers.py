@@ -13,6 +13,16 @@ def library_year(object, **kw):
         return ""
 
 @indexer(ISerial)
+def serial_priref(object, **kw):
+    try:
+        if hasattr(object, 'priref'):
+            return object.priref
+        else:
+            return ""
+    except:
+        return ""
+
+@indexer(ISerial)
 def library_author(object, **kw):
     try:
         if hasattr(object, 'titleAuthorImprintCollation_titleAuthor_author'):

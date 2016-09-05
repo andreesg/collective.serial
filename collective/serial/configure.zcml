@@ -70,13 +70,13 @@
   </class>
 
   <!-- Custom plone form widget -->
-  <browser:page
+  <!--<browser:page
     name="ploneform-render-widget"
     for=".serial.IFormWidget"
     class="plone.app.z3cform.templates.RenderWidget"
     permission="zope.Public"
     template="serial_templates/widget.pt"
-  />
+  />-->
 
   <!-- Custom Add and Edit form macro -->
   <browser:page
@@ -98,6 +98,7 @@
   <adapter name="copiesAndShelfMarks_copyDetails_site" factory=".utils.indexers.copiesAndShelfMarks_copyDetails_site" />
   
   <adapter name="library_author" factory=".utils.indexers.library_author" />
+  <adapter name="serial_priref" factory=".utils.indexers.serial_priref" />
   
   <!-- -*- extra stuff goes here -*- -->
   <adapter for=".serial.ISerial"
